@@ -1,316 +1,182 @@
-# data-analyst-aditya
+3-1-1 Inquiry Volume Analysis Portfolio
 
+AWS Cloud Foundations Badge: Credly Badge Link
+ Table of Contents
 
+    Exploratory Data Analysis
 
-Table of Contents:
+    Descriptive Analysis
 
-1.	Exploratory Data Analysis
+    Diagnostic Analysis
 
-2.	Descriptive Analysis
+    Data Wrangling
 
-3.	Diagnostic Analysis
+    Data Quality Control
 
-4.	Data Wrangling
+    Data Governance
 
-5.	Data Quality Control
+    Data Security
 
-6.	Data Governance
-
-
-
-
-Exploratory Data Analysis
-
-Project Description:
-3-1-1 Inquiry Volume Dataset stored in Amazon S3. The dataset records information about various public inquiries happened in different neighborhoods by numerous people and comprises of the type of inquiry reported, the neighborhood and also the date when the Inquiry took place.
+ Exploratory Data Analysis
 
 Project Title: Inquiry Volume Analysis with AWS Services
+ Dataset: 3-1-1 Inquiry Volume Dataset stored in Amazon S3
+🔹 Objective
 
-Objective:
-Use of AWS Glue Data Catalog access.
+Leverage AWS Glue Data Catalog and AWS Glue DataBrew to explore and profile public inquiry data.
+🔹 Key Steps
 
-Data Profiling and Cleaning:
-•	Here, inconsistences in our dataset (missing values, wrong delimiters) were found using AWS Glue DataBrew.
-•	Ensured proper data type on fields such as Date, InquiryType and VolumeCount.
+    Identified missing values and inconsistent delimiters using AWS Glue DataBrew
 
-Data Summarization and Analysis:
+    Ensured correct data types for Date, InquiryType, and VolumeCount
 
-•	To find key insights, I used Amazon Athena to perform SQL queries for extraction.
-•	Principal analysis consisted of looking for high frequency inquiry types and neighborhood specific trending times.
+    Used Amazon Athena for SQL-based querying to uncover patterns
 
-Tools and Technologies:
+🔹 Tools & Technologies
+
 Amazon S3, AWS Glue DataBrew, Amazon Athena
+🔹 Deliverables
 
-Deliverables:
-•	The Amazon S3 lists Spreadsheet with cleaned and Structured Dataset in it.
-•	Descriptive Analysis Reports that describe findings of inquiry patterns.
+    Cleaned dataset in S3 (spreadsheet format)
 
- 
-
-
-
-
-
-
-
-
-
-
+    Summary reports with key insights on inquiry trends
 
 Descriptive Analysis
 
-Project Description:
-Descriptive Analysis of the 3-1-1 Inquiry Volume Data set to summarize main characteristics and generate whatever insights related to kind of type of inquiry, frequency and neighborhood sensible patterns.
-
 Project Title: Understanding 3-1-1 Inquiry Patterns
+🔹 Objective
 
-Objective:
-In order to perform descriptive statistical analysis of the Inquiry Volume dataset and gain knowledge about the dispersion of many types of inquiries, the frequency over the time span of them, and distinctions between neighborhoods.
+Perform descriptive statistical analysis to examine type, frequency, and neighborhood-level trends.
+🔹 Dataset
 
-Dataset:
-•	3-1-1 Inquiry Volume CSV File
-•	The fields are Inquiry Type, Date, Neighborhood, and Volume Count.
-•	Amazon S3 the data is stored in it and we will be accessing it with the help of Amazon Athena for the analytical queries.
+    Inquiry Type, Date, Neighborhood, Volume Count
 
-Methodology:
-Data Analysis using SQL Queries:
-The summary statistics were generated using Amazon Athena.
+    Stored in Amazon S3, queried using Athena
 
-Queries focused on:
-•	Inquiry Type distribution.
-•	Neighborhood-wise inquiry counts.
-•	Trends over time (e.g., monthly/seasonal variations).
+🔹 Methodology
 
+    SQL-based aggregation using Amazon Athena
 
-Visualization of Inquiry Patterns:
-•	Key insights were related to graphs and chart forms to illustrate.
-•	The inquiry volumes were represented with bar charts and line graphs.
-•	High Frequency and low Frequency Inquiry Type Identification.
-•	Using the dataset to filter out and discover what types of inquires were most common from the parent.
-•	Understanding rare inquiries, which can be a clue of unique problems.
+    Visualization via Matplotlib and Power BI
 
-Tools and Technologies:
-Amazon S3, Amazon Athena, Visualization Tools (e.g., Matplotlib, Power BI)
+    Identified high-frequency and rare inquiry types
 
-Deliverables:
-Descriptive Analysis Reports comprised of trend, distribution and point of anomaly.
+🔹 Tools & Technologies
 
+Amazon S3, Amazon Athena, Matplotlib, Power BI
+🔹 Deliverables
 
+Descriptive reports with trend lines, seasonal patterns, and anomalies
+ Diagnostic Analysis
 
+Project Title: Investigating Unusual Inquiry Patterns
+🔹 Objective
 
-Diagnostic Analysis
+Identify causes of unusual spikes or drops in inquiry volume.
+🔹 Dataset
 
-Project Description:
-Analysis of potential causes of unusual inquiry patterns or significant changes in volume within the 3-1-1 Inquiry Volume Dataset. A process which can help aid in identifying the underlying causals for sudden spikes or drops in volume of an inquiry over time.
+    Stored in Amazon S3, analyzed via Amazon Athena
 
-The Title of the Project: Investigating Unusual Inquiry Patterns.
+🔹 Methodology
 
-Objective:
-Find, describe and explain why there are such variations in the inquiry volume (unusual spikes or drops in the dataset). Knowing the reason(s) for the anomaly will give to this diagnostic analysis will help in understanding bug candidates and help us with making data driven decision.
+    Comparative analysis of different time periods
 
-Dataset:
-•	311 Inquiry Volume CSV File
-•	Inquiry Type, Date, Neighborhood and Volume Count are the fields.
-•	Data stored and processed in Amazon S3, with query run through Amazon Athena.
+    Correlation analysis of inquiry types and volume
 
-Methodology:
-Comparative Analysis:
-•	Comparing different periods by using Amazon Athena.
-•	Finding timeframes with more often active events than the general trend.
+    Outlier detection and root cause analysis
 
-Correlation Analysis:
-•	Determining which inquiry categories have a disproportionate impact on the total volume.
-•	Anomaly detection by looking into the neighborhood specific trends.
+🔹 Tools & Technologies
 
-Anomaly Detection:
-•	Outliers that are much greater than the typical pattern.
-•	Classification of abnormal behavior using statistical thresholds.
+Amazon S3, Amazon Athena, Power BI, Matplotlib
+🔹 Deliverables
 
-Root Cause Identification:
-•	Deciding which of your anomalies are caused by some special event, data quality situation, or some external situation
-•	Trend analysis and correlation with historical data to valid findings.
+Diagnostic Analysis Report identifying anomalies and potential causes
+ Data Wrangling
 
-Tools and Technologies:
-Amazon S3, Amazon Athena, Visualization Tools (e.g., Power BI, Matplotlib)
+Project Title: Data Wrangling for Enhanced Inquiry Analysis
+🔹 Objective
 
-Deliverables:
-An identified anomalies with potential causes – Diagnostic Analysis Report.
+Clean, transform, and standardize the dataset for accurate and meaningful analysis.
+🔹 Methodology
 
+    Data Profiling: Used AWS Glue DataBrew to detect issues
 
-Data Wrangling
+    Data Cleaning: Removed duplicates, handled missing values, standardized formats
 
-Project Description:
-Data Washing for the 3-1-1 Inquiry Volume Dataset to sanitize data so that it may be examined by structured analysis having cleaned, transformed and standardized the dataset into a usable format.
+    Data Transformation: Normalized values, aggregated by category and time
 
-Title: Data Wrangling for Enhanced Inquiry Analysis
+    Data Consolidation: Saved cleaned data back to S3 for analysis
 
-Objective:
-We transform, clean, and prepare the 311 Inquiry Volume Dataset for further analyzing. This process makes the data accurate, consistent and structured in the way that gives meaningful insights.
+🔹 Tools & Technologies
 
-Dataset:
-•	3-1-1 Inquiry Volume CSV File
-•	It consists of the columns, Inquiry Type, Date, Neighborhood and Volume Count.
-•	Accessed and processed in Amazon S3 using AWS Glue DataBrew.
-
-Methodology:
-Data Collection:
-The dataset was ingested into an Amazon S3 and stored reliably and correctly in different ways.
-
-Data Profiling:
-•	In order to assess data quality, I review the column distributions, lookup for missing values, and examine the data types with AWS Glue DataBrew.
-•	Found that of missing values, invalid delimiters and mismatched data types.
-
-Data Cleaning:
-•	Using some applied transformations based on AWS Glue DataBrew:
-•	Replacing missing values.
-•	Removing duplicates.
-•	Renaming columns for consistency.
-•	Handling data types (ex-changing them to a convenient format like date formatting).
-
-Data Transformation:
-•	Ensured consistent labeling of normalized inquiry types.
-•	Summary of counts by date, type and neighborhood using aggregated data.
-
-Data Consolidation:
-Cleaned and transformed the dataset in Amazon S3 and stored back for further analysis on Amazon Athena.
-
-Tools and Technologies:
 Amazon S3, AWS Glue DataBrew
+🔹 Deliverables
 
-Deliverables:
-•	Cleaned Dataset ready for analysis.
-•	This is the Data Wrangling Report that documents the entire process.
+    Cleaned dataset ready for analysis
 
- 
+    Data Wrangling Report documenting the transformation pipeline
 
+ Data Quality Control
+🔹 Objective
 
+Ensure data completeness, accuracy, and reliability throughout the analysis pipeline.
+🔹 Methodology
 
-Data Quality Control
+    Profiling: Identified issues using AWS Glue DataBrew
 
-Project Description:
-This vacancy is to ensure data accuracy, consistency, and reliability across the data analysis pipeline for the 311 Inquiry Volume Dataset.
+    Cleansing: Handled nulls, duplicates, and data types
 
-Objective:
-Therefore, developing the overall data quality framework to address data integrity, completeness, accuracy, and integrity before analysis is performed.
+    Validation: Implemented automated rules and checks
 
-Methodology:
-1.	Data Profiling:
-•	To examine the dataset structure to detect potential problems like missing values, bad type of data etc., it used AWS Glue DataBrew.
-•	Data was generated for summary statistics to assess data completeness and unusual data.
+    Reporting: Documented all cleaning steps and generated exception reports
 
-2.	Data Cleansing:
-•	Some of the applied data cleaning transformations using AWS Glue DataBrew like:
-•	To remove null values or were replaced by suitable defaults.
-•	Eliminating duplicate entries.
-•	Data types were made correct and formats were standardized.
+🔹 Tools & Technologies
 
-3.	Validation Rules and Checks:
-•	We established validation rules to ensure consistency of the data and to make the data conform to expected standards.
-•	Automated checks were implemented to alert and identify possible problems before analysis.
-
-4.	Data Quality Reporting:
-•	Performed documented all cleaning steps and validation rules applied.
-•	Reported prepared reports with data quality improvement and exceptions reports, if any.
-
-Tools and Technologies:
 AWS Glue DataBrew, Amazon S3
+🔹 Deliverables
 
-Deliverables:
-Data Quality Control Report, documenting the phases of the data Profiling, cleaning and validation.
+Data Quality Control Report detailing profiling, cleaning, and validation efforts
+ Data Governance
+🔹 Objective
 
- 
+Design a framework for structured metadata management and secure access to datasets.
+🔹 Methodology
 
-Data Governance
+    Metadata Management: Built a centralized metadata repository using AWS Glue Data Catalog
 
-The structure of the given sentence is changed. In this case, it ensures reliable data usage during the different stages that are part of the entire data analysis pipeline.
+    Access Control: Enforced IAM policies and role-based permissions
 
-Objective: Design a framework that has a strong data governance, which shall maintain and facilitate the organization of metadata and data access, thereby facilitating an easy fit within the data analysis processes.
+    Consistency: Standardized naming conventions and applied dataset versioning
 
-Methodology:
-Metadata Management:
-•	It was configured to create a centralized metadata repository using AWS Glue Data Catalog.
-•	The data clarity and usability have been enhanced by naming the meaningful table and column names with descriptions.
+    Discovery: Used Glue Data Catalog for dataset search and integration
 
-Access Control Management:
-•	I applied IAM policies to limit what data someone can access via roles and permissions.
-•	Prevents people with fake WhaleSharks credentials from accessing the buckets or the whale shark specific datasets.
+🔹 Tools & Technologies
 
-Data Consistency:
-•	The application has standardized datasets, tables, and columns all with a known and unchanging naming convention.
-•	Enforced an applied versioning to hold historical integrity of datasets.
+AWS Glue Data Catalog, Amazon S3, IAM
+🔹 Deliverables
 
-Data Discovery:
-•	To aid in data discovery, structured query was used through the use of AWS Glue Data Catalog.
-•	It enabled efficient datasets searching and cataloging for further analysis to be done.
+Governance Documentation outlining metadata structure, access policies, and consistency rules
+ Data Security
 
-Tools and Technologies:
-AWS Glue Data Catalog, Amazon S3, IAM Policies
+Project Title: Data Security for 311 Inquiry Volume Dataset
+🔹 Objective
 
-Deliverables:
-Metadata structure, access management, data consistency processes are documented in Governance Documentation.
+Secure the data pipeline from ingestion to analysis against unauthorized access and threats.
+🔹 Methodology
 
+    Encryption: Used AWS KMS and SSE for S3 bucket encryption
 
+    Access Control: Applied IAM roles, S3 policies, and ACLs
 
-Data Security
+    Integrity: Enabled versioning, logging via AWS CloudTrail
 
-Project Description:
-Data Security Measurements for the 311 Inquiry Volume dataset is to protect the dataset during its lifecycle from ingestion to analysis against unauthorized access, tampering, loss.
+    Monitoring: Deployed AWS CloudWatch and SNS for alerts on suspicious activities
 
-Title of the project: Data Security for 311 Inquiry Volume Dataset
+    Compliance: Documented policies and adhered to AWS best practices
 
-Objective:
-The main use would be to set up a secure environment for storing, accessing and analyzing the 311 Inquiry Volume dataset using encryption, access control mechanism and studying monitoring system to maintain the confidentiality, integrity and availability of the data.
+🔹 Tools & Technologies
 
+Amazon S3, AWS KMS, IAM, CloudTrail, CloudWatch, SNS
+🔹 Deliverables
 
-Dataset:
-•	311 Inquiry Volume CSV File
-•	Inquiry Type, Date, Neighborhood, Volume Count are the fields.
-•	Amazon S3 stores data and AWS Glue Data Catalog and Amazon Athena are available to access it.
-
-
-Methodology:
-Data Encryption:
-•	Used AWS Key Management Service (KMS) to encrypt the datastore of the dataset to Amazon S3.
-•	It automatically encrypted data as it is uploaded using Enabled Server Side Encryption (SSE) with KMS keys.
-•	Ashley configured bucket policies to mandate that all data uploaded is encrypted.
-
-Access Control:
-•	IAM Policies were defined and applied as well to restrict the access to the dataset.
-•	Different user group, such as Data Analysts, Data Engineers, and Administrators, got role based access controls on.
-•	S3 Bucket Policies and ACLs were implemented for controlling the data access permissions.
-•	Only authorized users and services would be able to access or modify the dataset.
-
-Data Integrity:
-•	Facilitated security through the enabling of S3 Versioning for maintaining historical versions of datasets in order to recover the same in case we accidentally modify or delete them.
-•	Installed AWS CloudTrail to log every access request made on the dataset as well as any modifications for auditing purposes.
-•	Monitor the logs to see which attempt or suspicious act is unauthorized.
-
-Monitoring and Alerts:
-•	I picked up AWS services for monitoring the dataset accesses and performance metrics on Amazon CloudWatch.
-•	I created CloudWatch Alerms to detect suspicious access attempts or untypical looking query patterns.
-•	I configured Amazon SNS (Simple Notification Service) to send alerts to interested party when anomalies were detected.
-
-Documentation and Compliance:
-•	Kept a maintained documentation on all security policies, encryption standards and access controls.
-•	Ensured adherence to AWS best practices and compliance requirements for data security.
-
-Tools and Technologies:
-Amazon S3, AWS KMS, IAM Policies, AWS CloudTrail, Amazon CloudWatch, Amazon SNS
-
-Deliverables:
-Data Security Report describing security measures used to be applied, policies to be followed and configurations that have been implemented.
-
-
- 
-
- 
-
-
-
-
-
- 
-AWS Cloud Foundations Badge Link:
-https://www.credly.com/badges/1f862a47-8e76-4ba9-9fa9-d9651268f021/public_url
-
- 
+Security Report detailing encryption, access controls, monitoring systems, and compliance
